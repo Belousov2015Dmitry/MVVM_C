@@ -16,8 +16,11 @@ typealias FlowHandler<R> = (R) -> ()
 protocol FlowController
 {
     associatedtype R
+    associatedtype VM
     
     var completionHandler: FlowHandler<R>? { get set }
+    
+    var viewModel: VM? { get set }
 }
 
 

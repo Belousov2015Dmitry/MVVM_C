@@ -20,6 +20,7 @@ protocol Routable
     
     func push(controller: UIViewController, animated: Bool)
     func pop(animated: Bool)
+    func pop(to: UIViewController, animated: Bool)
 }
 
 
@@ -40,5 +41,9 @@ extension Routable
     
     func pop(animated: Bool = true) {
         _ = presenter?.popViewController(animated: animated)
+    }
+    
+    func pop(to controller: UIViewController, animated: Bool = true) {
+        _ = presenter?.popToViewController(controller, animated: animated)
     }
 }

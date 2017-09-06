@@ -36,7 +36,7 @@ class Observable<V>
             }
         }
     }
-    private var observers: [Binding<V>] = []
+    private var observers = [Binding<V>]()
     
     
     required init(_ value: V) {
@@ -48,6 +48,7 @@ class Observable<V>
         let index = observers.index { (binding) -> Bool in
             binding.target === target
         }
+        
         
         if index == nil {
             observers.append( Binding(target: target, observer: observer) )

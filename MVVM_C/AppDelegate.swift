@@ -11,10 +11,11 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    private lazy var appCoordinator: AppCoordinator = AppCoordinator(
+    private lazy var appCoordinator: MainCoordinator = MainCoordinator(
         router: AppRouter(presenter: self.window!.rootViewController as! UINavigationController),
-        coordinatorFactory: AppCoordinatorFactory(),
-        controllerFactory: AppControllerFactory()
+        coordinatorFactory: MainCoordinatorsFactory(),
+        controllerFactory: MainControllersFactory(),
+        viewModelFactory: MainViewModelFactory()
     )
     
     

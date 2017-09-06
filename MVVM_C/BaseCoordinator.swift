@@ -11,7 +11,7 @@ import UIKit
 
 
 
-class BaseCoordinator<CoordinatorFactory, ControllerFactory> : Coordinatable
+class BaseCoordinator<CoordinatorFactory, ControllerFactory, ViewModelFactory> : Coordinatable
 {
     var completionHandler: CoordinatorHandler? = nil
     
@@ -19,6 +19,7 @@ class BaseCoordinator<CoordinatorFactory, ControllerFactory> : Coordinatable
     
     let coordinatorFactory: CoordinatorFactory
     let controllerFactory: ControllerFactory
+    let viewModelFactory: ViewModelFactory
     
     var childCoordinators: [Coordinatable] = []
     
@@ -26,11 +27,13 @@ class BaseCoordinator<CoordinatorFactory, ControllerFactory> : Coordinatable
     required init(
         router: Routable,
         coordinatorFactory: CoordinatorFactory,
-        controllerFactory: ControllerFactory
+        controllerFactory: ControllerFactory,
+        viewModelFactory: ViewModelFactory
     ) {
         self.router = router
         self.coordinatorFactory = coordinatorFactory
         self.controllerFactory = controllerFactory
+        self.viewModelFactory = viewModelFactory
     }
     
     func start() { }
