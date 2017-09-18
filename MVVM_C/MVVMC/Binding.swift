@@ -2,8 +2,8 @@
 //  Observable.swift
 //  MVVM_C
 //
-//  Created by developer on 01.09.17.
-//  Copyright © 2017 burunduk. All rights reserved.
+//  Created by Dmitry Belousov on 01.09.17.
+//  Copyright © 2017 Dmitry Belousov. All rights reserved.
 //
 
 import Foundation
