@@ -2,8 +2,8 @@
 //  BaseCoordinator.swift
 //  MVVM_C
 //
-//  Created by developer on 28.08.17.
-//  Copyright © 2017 burunduk. All rights reserved.
+//  Created by Dmitry Belousov on 28.08.17.
+//  Copyright © 2017 Dmitry Belousov. All rights reserved.
 //
 
 import Foundation
